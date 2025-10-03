@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Salary Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 AI Salary Analyzer</h1>
+            <p>Track your income, expenses, and savings with AI insights!</p>
+            <img src="finance.jpg" alt="Finance" class="header-img">
+        </header>
+
+        <div class="input-section">
+            <h2>📊 Enter Your Salary & Expenses</h2>
+            <form id="salaryForm">
+                <div class="form-group">
+                    <label for="month">Month:</label>
+                    <select id="month" required>
+                        <option value="">-- Select Month --</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="salary">Monthly Salary (₹):</label>
+                    <input type="number" id="salary" placeholder="e.g., 50000" required>
+                </div>
+
+                <div class="expenses-container">
+                    <h3>💸 Monthly Expenses</h3>
+                    <div id="expensesList">
+                        <!-- Dynamic expenses added here -->
+                    </div>
+                    <button type="button" id="addExpense" class="btn">➕ Add Expense</button>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Analyze My Salary</button>
+            </form>
+        </div>
+
+        <div class="result-section hidden" id="resultSection">
+            <h2>📈 Your Salary Analysis</h2>
+            <div class="chart-container">
+                <canvas id="salaryChart"></canvas>
+            </div>
+            <div class="summary">
+                <h3>📝 Summary</h3>
+                <div id="summaryDetails"></div>
+            </div>
+            <div class="ai-insights">
+                <h3>🤖 AI-Powered Insights</h3>
+                <div id="aiTips"></div>
+            </div>
+            <button id="generateAnnualReport" class="btn">📅 Generate Annual Report</button>
+        </div>
+
+        <div class="annual-report hidden" id="annualReport">
+            <h2>📅 Annual Financial Report</h2>
+            <div id="annualData"></div>
+            <button id="backToAnalysis" class="btn">🔙 Back to Analysis</button>
+        </div>
+
+        <div class="tips-section">
+            <h2>💡 Money Management Tips</h2>
+            <img src="saving.jpg" alt="Savings Tips" class="tips-img">
+            <div class="tips-content">
+                <div class="tip">
+                    <h3>50/30/20 Rule</h3>
+                    <p>Allocate 50% to needs, 30% to wants, and 20% to savings.</p>
+                </div>
+                <div class="tip">
+                    <h3>Track Every Expense</h3>
+                    <p>Use apps to monitor spending habits.</p>
+                </div>
+                <div class="tip">
+                    <h3>Build an Emergency Fund</h3>
+                    <p>Save 3-6 months of expenses for emergencies.</p>
+                </div>
+                <div class="tip">
+                    <h3>Invest Early</h3>
+                    <p>Start SIPs or mutual funds for long-term growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
